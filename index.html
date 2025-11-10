@@ -6,6 +6,16 @@
   <title>Pinky Gupta | Personal Stylist</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- contact form styles removed (no form present) -->
+  <style>
+    /* Small social tile styles for reel preview */
+    .social-tile{margin-top:18px;max-width:540px}
+    .reel-link{position:relative;display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);background:#000}
+    .reel-link img{width:100%;height:auto;display:block}
+    .reel-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+    .play-icon{width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px}
+    .reel-caption{padding:10px 12px;background:#fff;font-weight:600;color:#222}
+  </style>
 </head>
 <body>
 
@@ -54,8 +64,8 @@
             <p>Private shopping sessions tailored to your style goals, lifestyle, and budget.</p>
           </div>
           <div class="service">
-            <h3>Event Styling</h3>
-            <p>Complete outfit planning for special occasions — from weddings to business events.</p>
+            <h3>Personal brand styling</h3>
+            <p>Helping entrepreneurs, speaker or executives craft a visual identity that matches their goals</p>
           </div>
         </div>
       </div>
@@ -66,6 +76,17 @@
         <h2>Follow Along</h2>
         <p>Daily inspiration, outfit ideas, and behind-the-scenes looks on Instagram.</p>
         <p><a class="book-btn" href="https://www.instagram.com/styleby_pinky/" target="_blank">Follow @styleby_pinky</a></p>
+        
+        <!-- Instagram reel preview tile (click to open reel on Instagram) -->
+        <div class="social-tile">
+          <a class="reel-link" href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTk2NDg4MDM3NDczNDM2?igsh=amN6YXRzb3h3cnpx" target="_blank" rel="noopener noreferrer">
+            <div class="reel-thumb">
+              <img src="pinkylinky.jpg" alt="Instagram reel preview" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20360%27%3E%3Crect%20width%3D%27600%27%20height%3D%27360%27%20fill%3D%27%23efefef%27%2F%3E%3Ctext%20x%3D%27300%27%20y%3D%27185%27%20font-size%3D%2720%27%20text-anchor%3D%27middle%27%20fill%3D%27%23999%27%20font-family%3D%27Arial%27%3EInstagram%20Reel%3C%2Ftext%3E%3C%2Fsvg%3E';">
+            </div>
+            <div class="reel-play" aria-hidden="true"><span class="play-icon">▶</span></div>
+            <div class="reel-caption">Open reel on Instagram</div>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -82,7 +103,14 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <p>For inquiries or to work together, email <a href="mailto:pinky@example.com">pinky@example.com</a>.</p>
+        <p>For inquiries or to work together, please email <a href="mailto:stylebypinkyg@gmail.com">stylebypinkyg@gmail.com</a>.</p>
+
+        <!-- QR code: click to open full-size -->
+        <p style="margin-top:12px">
+          <a href="QRCode.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="QRCode.jpeg" alt="QR code to contact styleby_pinky" style="max-width:220px;height:auto;display:block;border-radius:6px;border:1px solid rgba(0,0,0,0.06)">
+          </a>
+        </p>
       </div>
     </section>
   </main>
@@ -92,5 +120,6 @@
   </footer>
 
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script async defer src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
