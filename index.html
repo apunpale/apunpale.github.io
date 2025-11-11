@@ -15,6 +15,18 @@
     .reel-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
     .play-icon{width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px}
     .reel-caption{padding:10px 12px;background:#fff;font-weight:600;color:#222}
+    /* Override hero background to use Background.jpg instead of default dark grey */
+    /* Prefer showing more of the top of the image (adjustable) */
+    .hero{position:relative;background-image: url('Background.jpg');background-position:50% -30%;background-size:relative;background-repeat:no-repeat;color:#fff}
+
+    @media (max-width:720px){
+      /* On small screens show the very top of the image */
+      .hero{background-position:50% 0%}
+    }
+    /* Add optional overlay for legibility */
+    .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));pointer-events:none}
+    /* ensure hero content sits above overlay */
+    .hero-inner{position:relative;z-index:2}
   </style>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY79E4SQ6S"></script>
