@@ -6,28 +6,7 @@
   <title>Pinky Gupta | Personal Stylist</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- contact form styles removed (no form present) -->
-  <style>
-    /* Small social tile styles for reel preview */
-    .social-tile{margin-top:18px;max-width:540px}
-    .reel-link{position:relative;display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);background:#000}
-    .reel-link img{width:100%;height:auto;display:block}
-    .reel-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
-    .play-icon{width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px}
-    .reel-caption{padding:10px 12px;background:#fff;font-weight:600;color:#222}
-    /* Override hero background to use Background.jpg instead of default dark grey */
-    /* Prefer showing more of the top of the image (adjustable) */
-    .hero{position:relative;background-image: url('Background.jpg');background-position:50% -30%;background-size:relative;background-repeat:no-repeat;color:#fff}
-
-    @media (max-width:720px){
-      /* On small screens show the very top of the image */
-      .hero{background-position:50% 0%}
-    }
-    /* Add optional overlay for legibility */
-    .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));pointer-events:none}
-    /* ensure hero content sits above overlay */
-    .hero-inner{position:relative;z-index:2}
-  </style>
+  <!-- Styles moved to css/style.css for maintainability. -->
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY79E4SQ6S"></script>
 <script>
@@ -53,7 +32,8 @@
     </div>
   </nav>
 
-  <header class="hero" role="banner">
+  <!-- You can tune the hero crop by changing the data-hero-pos value (example: "50% 12%") -->
+  <header class="hero" role="banner" data-hero-pos="50% 10%">
     <div class="hero-inner">
       <div class="hero-copy">
         <h1>Effortless Style, Uncompromised Confidence</h1>
@@ -67,10 +47,37 @@
 
   <main>
     <section id="about" class="section">
+Let me reassure you one thing: I will not judge you for your body, your budget, or your existing wardrobe. I have been there done that, have had multiple times in life where budget constraints, work constraints or body feel made me struggle to invest in myself and that’s totally fine.</p>
       <div class="container">
         <h2>About Pinky</h2>
-        <p>I am Pinky, a Personal Stylist and Image Consultant based in London. Having personally experienced the profound ways life's transitions shape both our physical bodies and our mindset, I've developed a deep commitment to guiding women through these changes. When I had my baby, I held onto the clothes from pre-baby body for 5 years hoping, thinking that one day I will go back to that shape, size and style. And every day I wanted to change myself to the past rather than embrace my today and the demands of what I needed today. I felt guilty of letting go. And then I got an opportunity to change my outlook and show up at work with intention. So I learnt when you dress up with intention, you are confident. I want to help you break free from old style narratives and fully embrace the woman you are today.
-Let me reassure you one thing: I will not judge you for your body, your budget, or your existing wardrobe. I have been there done that, have had multiple times in life where budget constraints, work constraints or body feel made me struggle to invest in myself and that’s totally fine.</p>
+        <div class="about-content" style="display:flex;flex-direction:column;align-items:center;max-width:700px;margin:0 auto;gap:32px;">
+          <div class="about-image" style="width:100%;max-width:340px;">
+            <img src="About me.jpg" alt="About Pinky" style="width:100%;height:auto;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.08);object-fit:cover;">
+          </div>
+          <div class="about-text" style="font-size:1.08em;line-height:1.7;width:100%;">
+            <p><strong>My Journey: From Playing Dress-Up to Power Dressing with Purpose</strong></p>
+            <p>For as long as I can remember, clothes have been my favourite form of creativity — a colourful canvas of confidence.<br>
+            As a little girl, I loved the freedom of fashion — twirling in pretty pink dresses one day and strutting in bold trousers the next. I was playful yet purposeful, always experimenting with how clothes could change how I felt. I was the one friends turned to with curious smiles — “Where did you find that?” — because even then, I was chasing not just style, but self-expression.</p>
+            <p>My fascination with fashion grew as I did. At university and early in my career, I learned how colour could shape mood — a lesson from my dad, who taught me about “the colour of the day.” I followed it religiously, discovering how a pop of pink or a splash of sunshine yellow could shift my energy and elevate my presence.<br>
+            My wardrobe was my happy place — a blend of play, power, and personality.</p>
+            <p>Then life — and motherhood — hit pause on my palette.</p>
+            <p>My wardrobe hung silent while I reached for comfort and convenience. My body had changed, my confidence faded, and getting dressed became more about survival than self-expression. The mirror reflected a woman who was giving everything to everyone — except herself.</p>
+            <p>One day, something clicked. I realised I didn’t want to disappear behind “easy.” I wanted to feel like me again — vibrant, visible, alive.</p>
+            <p>So, I began the slow, soulful journey back: learning how to dress with intention, curating colours that sparked joy, and rediscovering the power of presence.</p>
+            <p>Each outfit became a small act of self-love — a promise to honour the woman I was becoming.</p>
+            <p>As I shared this transformation with friends and family, they began asking for help — and I found my purpose.<br>
+            Helping women reconnect with their reflection became my passion. I saw how many of us were hiding behind our hangers, dressing for others, not ourselves. I wanted to change that — to help women reclaim their confidence, their colour, their pink power.</p>
+            <p>So, I built my practice around wardrobe consultations and personal styling, focusing on helping women find their voice through their clothes.<br>
+            Later, my journey evolved again — working with female founders and changemakers who were representing both themselves and their brands. These were powerful women with powerful stories — they just needed their style to speak the same language. Together, we worked on aligning their outer image with their inner brilliance.</p>
+            <p>Because here’s what I believe —</p>
+            <ul style="margin-left:1em;">
+              <li>✨ Style is a language- and women deserve to speak it boldly</li>
+              <li>✨ Colour is confidence made visible</li>
+            </ul>
+            <p><strong>My Mission is Simple:</strong> To help you show up in your full, feminine, fearless self.</p>
+            <p>Whether you're leading a boardroom, commanding a stage, or simply rediscovering your own spark, your wardrobe should be your mirror, your armour, and your amplifier.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -97,18 +104,39 @@ Let me reassure you one thing: I will not judge you for your body, your budget, 
     <section id="social" class="section">
       <div class="container">
         <h2>Follow Along</h2>
-        <p>Daily inspiration, outfit ideas, and behind-the-scenes looks on Instagram.</p>
-        <p><a class="book-btn" href="https://www.instagram.com/styleby_pinky/" target="_blank">Follow @styleby_pinky</a></p>
+        <p>Daily inspiration, outfit ideas, and behind-the-scenes looks.</p>
         
-        <!-- Instagram reel preview tile (click to open reel on Instagram) -->
-        <div class="social-tile">
-          <a class="reel-link" href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTk2NDg4MDM3NDczNDM2?igsh=amN6YXRzb3h3cnpx" target="_blank" rel="noopener noreferrer">
-            <div class="reel-thumb">
-              <img src="pinkylinky.jpg" alt="Instagram reel preview" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20600%20360%27%3E%3Crect%20width%3D%27600%27%20height%3D%27360%27%20fill%3D%27%23efefef%27%2F%3E%3Ctext%20x%3D%27300%27%20y%3D%27185%27%20font-size%3D%2720%27%20text-anchor%3D%27middle%27%20fill%3D%27%23999%27%20font-family%3D%27Arial%27%3EInstagram%20Reel%3C%2Ftext%3E%3C%2Fsvg%3E';">
+        <!-- Instagram posts grid with thumbnails -->
+        <div class="instagram-feed" id="instagramFeed">
+          <a href="https://www.instagram.com/p/Cw24XOIrSns/?igsh=aDU2d25pZjU4bGI3" target="_blank" rel="noopener noreferrer" class="feed-post">
+            <div class="feed-post-overlay">
+              <div class="play-icon">Instagram</div>
             </div>
-            <div class="reel-play" aria-hidden="true"><span class="play-icon">▶</span></div>
-            <div class="reel-caption">Open reel on Instagram</div>
+            <img src="post1.jpg" alt="Instagram post 1" loading="lazy" onerror="this.style.background='#f0f0f0'">
           </a>
+          <a href="https://www.instagram.com/p/C4pKIQkIw5u/?igsh=bDNzNm51cTBiZWVw" target="_blank" rel="noopener noreferrer" class="feed-post">
+            <div class="feed-post-overlay">
+              <div class="play-icon">Instagram</div>
+            </div>
+            <img src="post2.jpg" alt="Instagram post 2" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          </a>
+          <a href="https://www.instagram.com/p/C2wkKy3I3v2/?igsh=cG1zeGthcjN6d3k3" target="_blank" rel="noopener noreferrer" class="feed-post">
+            <div class="feed-post-overlay">
+              <div class="play-icon">Instagram</div>
+            </div>
+            <img src="post3.jpg" alt="Instagram post 3" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          </a>
+          <a href="https://www.instagram.com/p/DAykmHxoWcX/?igsh=ajdkZjkycDQ3MmVx" target="_blank" rel="noopener noreferrer" class="feed-post">
+            <div class="feed-post-overlay">
+              <div class="play-icon">Instagram</div>
+            </div>
+            <img src="post4.jpg" alt="Instagram post 4" loading="lazy" onerror="this.style.background='#f0f0f0'">
+          </a>
+        </div>
+
+        <!-- Feed buttons -->
+        <div class="feed-actions" style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="https://www.instagram.com/styleby_pinky/" target="_blank" rel="noopener noreferrer" class="book-btn">Follow @styleby_pinky</a>
         </div>
       </div>
     </section>
@@ -118,22 +146,15 @@ Let me reassure you one thing: I will not judge you for your body, your budget, 
         <h2>Testimonials</h2>
         <p>Real clients share their experience — view the original story on Instagram or read the quote below.</p>
 
-        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;margin-top:12px">
-          <a class="reel-link" href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTcyOTgxMDQyNjgyNDAx?story_media_id=3316523201120512550&igsh=OTM0Nnl2N280MGJm" target="_blank" rel="noopener noreferrer" style="max-width:320px;flex:0 0 320px">
-            <div class="reel-thumb">
-              <img src="pinkylinky.jpg" alt="Testimonial story preview" loading="lazy" style="width:100%;height:auto;display:block" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20600%20360%27%3E%3Crect%20width=%27600%27%20height=%27360%27%20fill=%27%23efefef%27/%3E%3Ctext%20x=%27300%27%20y=%27185%27%20font-size=%2720%27%20text-anchor=%27middle%27%20fill=%27%23999%27%20font-family=%27Arial%27%3EInstagram%20Story%3C/text%3E%3C/svg%3E';">
-            </div>
-            <div class="reel-play" aria-hidden="true"><span class="play-icon">▶</span></div>
-            <div class="reel-caption">Open testimonial on Instagram</div>
-          </a>
-
-          <div style="flex:1;min-width:240px">
-            <blockquote id="testimonial-quote" style="margin:0 0 8px;padding:16px;background:#fff;border-radius:8px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 6px 18px rgba(0,0,0,0.04)">
-              <p style="margin:0;font-style:italic;color:#333">"This is a lovely testimonial from a client — if you'd like I can import and display the exact text here. Instagram blocks direct scraping, so please paste the quote below or allow me to fetch it if you can provide the canonical /reel/ or /p/ permalink."</p>
-              <footer style="margin-top:8px;font-size:0.95rem;color:#666">— Instagram story</footer>
-            </blockquote>
-
-            <p style="margin-top:8px;color:#666;font-size:.95rem">If you want me to extract the exact text I can try if you paste the canonical permalink for the post (Copy Link in the Instagram app). Alternatively, paste the quote and I'll add it here.</p>
+        <div class="testimonials-gallery" style="margin-top:12px;">
+          <div class="testimonial-item">
+            <img src="testimonial1.jpg" alt="Testimonial 1" style="width:100%;height:auto;border-radius:8px;display:block;border:1px solid rgba(0,0,0,0.06)">
+          </div>
+          <div class="testimonial-item">
+            <img src="testimonial2.jpg" alt="Testimonial 2" style="width:100%;height:auto;border-radius:8px;display:block;border:1px solid rgba(0,0,0,0.06)">
+          </div>
+          <div class="testimonial-item">
+            <img src="testimonial3.jpg" alt="Testimonial 3" style="width:100%;height:auto;border-radius:8px;display:block;border:1px solid rgba(0,0,0,0.06)">
           </div>
         </div>
       </div>
@@ -143,9 +164,9 @@ Let me reassure you one thing: I will not judge you for your body, your budget, 
       <div class="container">
         <h2>Book a session</h2>
         <p>Choose a convenient time for a 30-minute styling session.</p>
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/styleby_pinky/30min" style="min-width:320px;height:700px;"></div>
-        <!-- Calendly inline widget end -->
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/styleby_pinky/30min"></div>
+  <!-- Calendly inline widget end -->
       </div>
     </section>
 
@@ -170,5 +191,100 @@ Let me reassure you one thing: I will not judge you for your body, your budget, 
 
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script async defer src="https://www.instagram.com/embed.js"></script>
+
+  <!-- Lightbox markup for testimonial images -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close" id="lightboxClose" aria-label="Close">✕</button>
+    <img id="lightboxImg" alt="" src="" />
+  </div>
+
+  <script>
+    // Apply hero focal point from data attribute (data-hero-pos on .hero)
+    (function(){
+      var hero = document.querySelector('.hero');
+      if(!hero) return;
+      function applyPos(){
+        var pos = hero.getAttribute('data-hero-pos') || '50% 10%';
+        hero.style.backgroundPosition = pos;
+      }
+      applyPos();
+      // If a CMS or editor wants to update data-hero-pos dynamically, reapply on attribute change
+      if (window.MutationObserver) {
+        var mo = new MutationObserver(function(){ applyPos(); });
+        mo.observe(hero, { attributes: true, attributeFilter: ['data-hero-pos'] });
+      }
+    })();
+
+    // Simple lightbox for testimonial images
+    (function(){
+      var gallery = document.querySelector('.testimonials-gallery');
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var closeBtn = document.getElementById('lightboxClose');
+      if(!gallery || !lightbox) return;
+
+      gallery.addEventListener('click', function(e){
+        var img = e.target.closest('img');
+        if(!img) return;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || '';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden','false');
+      });
+      function close(){
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden','true');
+        lightboxImg.src = '';
+      }
+      closeBtn.addEventListener('click', close);
+      lightbox.addEventListener('click', function(e){ if(e.target === lightbox) close(); });
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+    })();
+
+    // Extract Instagram post thumbnails from post URLs
+    (function(){
+      var posts = [
+        { url: 'https://www.instagram.com/p/Cw24XOIrSns/?igsh=aDU2d25pZjU4bGI3', selector: 'a[href*="Cw24XOIrSns"] img' },
+        { url: 'https://www.instagram.com/p/C4pKIQkIw5u/?igsh=bDNzNm51cTBiZWVw', selector: 'a[href*="C4pKIQkIw5u"] img' },
+        { url: 'https://www.instagram.com/p/C2wkKy3I3v2/?igsh=cG1zeGthcjN6d3k3', selector: 'a[href*="C2wkKy3I3v2"] img' },
+        { url: 'https://www.instagram.com/p/DAykmHxoWcX/?igsh=ajdkZjkycDQ3MmVx', selector: 'a[href*="DAykmHxoWcX"] img' }
+      ];
+
+      posts.forEach(function(post){
+        var img = document.querySelector(post.selector);
+        if(!img) return;
+
+        // Extract shortcode from URL (format: /p/SHORTCODE/)
+        var shortcode = post.url.split('/p/')[1].split('/')[0];
+        
+        // Instagram thumbnail URL format: https://www.instagram.com/p/{shortcode}/media/?size=l
+        var instagramThumbUrl = 'https://www.instagram.com/p/' + shortcode + '/media/?size=l';
+        
+        // Try to load thumbnail from Instagram CDN
+        fetch(instagramThumbUrl)
+          .then(function(response){
+            if(response.ok){
+              img.src = instagramThumbUrl;
+            }
+          })
+          .catch(function(){
+            // If fetch fails, try using Instagram's oEmbed API for metadata
+            fetch('https://www.instagram.com/oembed/?url=' + encodeURIComponent(post.url))
+              .then(function(response){ return response.json(); })
+              .then(function(data){
+                if(data.thumbnail_url){
+                  img.src = data.thumbnail_url;
+                }
+              })
+              .catch(function(){
+                // If both fail, keep placeholder or use local fallback
+                console.log('Could not fetch Instagram image for:', shortcode);
+              });
+          });
+      });
+    })();
+  </script>
 </body>
 </html>
+
+

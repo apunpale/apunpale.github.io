@@ -114,6 +114,48 @@ a:hover {
   max-width: var(--max-width);
   margin: 0 auto;
 }
+
+/* About section with image + text layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #222;
+}
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+}
+.about-text p.highlight {
+  font-style: italic;
+  background: rgba(226, 209, 195, 0.15);
+  padding: 16px 20px;
+  border-left: 4px solid var(--highlight);
+  border-radius: 4px;
+  margin: 24px 0;
+  font-size: 1.05rem;
+}
+.about-text strong {
+  font-weight: 600;
+  color: #000;
+}
+
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -186,4 +228,64 @@ footer {
   .hero-inner {
     padding-top: 120px;
   }
+  
+  /* Stack about section on mobile */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Appended overrides & small components moved from index.html --- */
+/* Social reel tile */
+.social-tile{margin-top:18px;max-width:540px}
+.reel-link{position:relative;display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(0,0,0,0.06);background:#000}
+.reel-link img{width:100%;height:auto;display:block}
+.reel-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.play-icon{width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px}
+.reel-caption{padding:10px 12px;background:#fff;font-weight:600;color:#222}
+
+/* Testimonials gallery: horizontal scroll with snap */
+.testimonials-gallery{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:8px;padding-top:6px;flex-wrap:nowrap}
+.testimonials-gallery::-webkit-scrollbar{height:10px}
+.testimonials-gallery::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.12);border-radius:6px}
+.testimonial-item{flex:0 0 320px;scroll-snap-align:center}
+@media (max-width:720px){.testimonial-item{flex:0 0 85%}}
+
+/* Hero overrides from inline styles (kept here so images referenced from root work) */
+.hero{position:relative;background-image: url('../Background.jpg');background-position:50% 10%;background-size:cover;background-repeat:no-repeat;color:#fff}
+@media (max-width:720px){.hero{background-position:50% 0%}}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));pointer-events:none}
+.hero-inner{position:relative;z-index:2}
+
+/* Calendly responsive helper */
+.calendly-inline-widget{max-width:100%;width:100%;height:700px}
+@media (max-width:720px){.calendly-inline-widget{height:620px}}
+
+/* Lightbox overlay for testimonials */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:999}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92%;max-height:88%;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,0.6)}
+.lightbox .close{position:absolute;top:20px;right:24px;color:#fff;font-size:28px;cursor:pointer}
+
+/* Visually-hidden helper (screen-reader only) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Instagram feed grid */
+.instagram-feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:24px;margin-bottom:12px}
+.feed-post{position:relative;display:block;border-radius:10px;overflow:hidden;background:#f5f5f5;aspect-ratio:1;cursor:pointer;text-decoration:none;border:1px solid rgba(0,0,0,0.05);transition:all 0.3s ease}
+.feed-post img{width:100%;height:100%;object-fit:cover;display:block}
+.feed-post-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0);transition:background 0.3s ease;pointer-events:none}
+.feed-post:hover .feed-post-overlay{background:rgba(0,0,0,0.4)}
+.feed-post:hover .play-icon{transform:scale(1.1)}
+.play-icon{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;color:#000;font-weight:600;font-size:12px;transition:transform 0.3s ease;text-align:center;padding:8px}
+
+@media (max-width:768px){
+  .instagram-feed{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 }
