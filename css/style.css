@@ -104,7 +104,7 @@ a:hover {
 
 /* Sections */
 .section {
-  padding: 90px 20px;
+  padding: 45px 20px;
   background: #fff;
 }
 .section.alt {
@@ -259,7 +259,7 @@ footer {
 @media (max-width:720px){.testimonial-item{flex:0 0 85%}}
 
 /* Hero overrides from inline styles (kept here so images referenced from root work) */
-.hero{position:relative;background-image: url('../Background.jpg');background-position:50% 10%;background-size:cover;background-repeat:no-repeat;color:#fff}
+.hero{position:relative;background-image: url('../Background.jpg');background-position:50% 22%;background-size:cover;background-repeat:no-repeat;color:#fff}
 @media (max-width:720px){.hero{background-position:50% 0%}}
 .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25));pointer-events:none}
 .hero-inner{position:relative;z-index:2}
