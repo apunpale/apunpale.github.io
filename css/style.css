@@ -142,6 +142,16 @@ a:hover {
   color: #444;
   margin-bottom: 18px;
 }
+
+/* Make About paragraphs fully justified for cleaner edges */
+.about-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-align-last: left;
+}
 .about-text p.highlight {
   font-style: italic;
   background: rgba(226, 209, 195, 0.15);
