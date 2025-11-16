@@ -252,9 +252,11 @@ footer {
 .reel-caption{padding:10px 12px;background:#fff;font-weight:600;color:#222}
 
 /* Testimonials gallery: horizontal scroll with snap */
+.instagram-post-gallery2,
 .testimonials-gallery{display:flex;gap:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:8px;padding-top:6px;flex-wrap:nowrap}
 .testimonials-gallery::-webkit-scrollbar{height:10px}
 .testimonials-gallery::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.12);border-radius:6px}
+.instagram-post-gallery2-item,
 .testimonial-item{flex:0 0 320px;scroll-snap-align:center}
 @media (max-width:720px){.testimonial-item{flex:0 0 85%}}
 
