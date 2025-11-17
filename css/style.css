@@ -250,6 +250,25 @@ footer {
   .about-text p {
     font-size: 0.95rem;
   }
+
+  /* Make hero lead smaller and wrap cleanly on narrow screens */
+  .lead {
+    font-size: 1rem;
+    max-width: 100%;
+    line-height: 1.45;
+  }
+}
+
+/* Tight mobile breakpoint: force wrapping/breaks only on very small screens */
+@media (max-width: 480px) {
+  .lead {
+    font-size: 0.95rem;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+    line-height: 1.45;
+  }
 }
 
 /* --- Appended overrides & small components moved from index.html --- */
