@@ -260,7 +260,7 @@ footer {
 }
 
 /* Tight mobile breakpoint: force wrapping/breaks only on very small screens */
-@media (max-width: 480px) {
+@media (max-width: 420px) {
   .lead {
     font-size: 0.95rem;
     max-width: 100%;
